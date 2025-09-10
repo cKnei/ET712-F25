@@ -67,7 +67,7 @@ function checkName() {
             continue;
         }
 
-        let parsedNumber = parsefloat(potentialName);
+        let parsedNumber = parseFloat(potentialName);
         if ( !isNaN(parsedNumber) && `${parsedNumber}` !== potentialName ) {
             potentialName = prompt(`${potentialName} is invalid! Enter a name again`);
             continue;
