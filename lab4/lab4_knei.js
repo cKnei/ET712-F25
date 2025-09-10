@@ -68,7 +68,7 @@ function checkName() {
         }
 
         let parsedNumber = parseFloat(potentialName);
-        if ( !isNaN(parsedNumber) && `${parsedNumber}` !== potentialName ) {
+        if ( !isNaN(parsedNumber) || `${parsedNumber}` === potentialName ) {
             potentialName = prompt(`${potentialName} is invalid! Enter a name again`);
             continue;
         }
@@ -76,6 +76,6 @@ function checkName() {
         break;
     }
 
-    console.log(`Welcome ${potentialName.toUppperCase()} to the class!`);
+    console.log(`Welcome ${potentialName.toUpperCase()} to the class!`);
 }
 
