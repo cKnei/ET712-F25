@@ -59,7 +59,7 @@ console.log(`Is ${username_in} a Number? ${check_username}`);
 if ( check_username ) {
     console.log(`${username_in} is a String`);
 } else {
-    console.log(`${username-in} is a Number`);
+    console.log(`${username_in} is a Number`);
 }
 
 console.log("\n Example 6: Multi Conditional if Expression");
