@@ -27,7 +27,7 @@ let MovieCollection = {
         }
 
         let tMovies = [];
-        for ( let movie in this.movies ) {
+        for ( let movie of this.movies ) {
             if ( movie.title !== title ) 
                 tMovies.push(movie);
         }
@@ -46,7 +46,7 @@ let MovieCollection = {
             return;
         }
         
-        for ( let movie in this.movies )
+        for ( let movie of this.movies )
             console.log(movie.getDetails());
     }
 }
