@@ -57,3 +57,17 @@
     background-color: maroon;
     margin: auto;
 }
+
+.username_paragraph {
+    color: red;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* Exercise */
+div.divs2, div.divs3{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    margin: 20px;
+}
