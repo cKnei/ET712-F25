@@ -111,3 +111,4 @@ let divs3 = document.querySelector(".divs3");
 divs3.addEventListener("keydown", function() {
     divs3.style.width = "300px";
 });
+
