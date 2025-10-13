@@ -7,10 +7,10 @@ console.log("Knei");
 
 let btnpressme = document.querySelector(".btnpressme");
 btnpressme.addEventListener("click", function(event) {
-    if ( event.target.textContent === "PRESS ME!" ) {
+    if ( event.target.textContent == "PRESS ME!" ) {
         event.target.textContent = "Button Was Pressed!";
     } else {
-        event.target.textContent = "PRESS ME AGAIN!";
+        event.target.textContent = "PRESS ME!";
     }
 
     event.target.classList.toggle("btnactive");
@@ -51,4 +51,23 @@ btnright.addEventListener("click", function() {
 });
 btnleft.addEventListener("click", function() {
     scrollGallery(-500);
+});
+
+
+
+//EXERCISES 
+let count = 0;
+
+const circle = document.querySelector(".circle");
+const counter = document.querySelector(".counter");
+
+circle.addEventListener("click", function() {
+    count++;
+    counter.textContent = count;
+});
+
+const resetCounter = document.querySelector(".reset-count");
+resetCounter.addEventListener("click", function() {
+    count = 0;
+    counter.textContent = 0;
 });

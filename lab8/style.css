@@ -31,7 +31,7 @@ img {
     display: inline-block;
     border: solid red 1px;
     margin-left: 30px;
-    wdith: 20%;
+    width: 20%;
 }
 
 #list li:hover {
@@ -61,8 +61,7 @@ img {
 
 .gallery-image {
     display: inline-block;
-    width: 50%;
-    height: 650px;
+    width: 25%;
 }
 
 .btnright, .btnleft {
@@ -86,4 +85,11 @@ img {
 
 .btnright {
     right: 0%;
+}
+
+.circle {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
 }
