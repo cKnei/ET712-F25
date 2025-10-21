@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Knei | Lab 10</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Knei</h1>
+
+        <form action="formsent.html" class="myform" id="form1">
+            <legend class="legend">User Info</legend>
+            <section class="form_control">
+                <label class="form_label" for="username">Enter Username: </label>
+                <input class="form_input" type="text" id="username" maxlength="20" placeholder="Enter username...">
+                <p class="username_error_message">Username must be between 2 and 20 characters</p>
+            </section>
+
+            <section class="form_control">
+                <label for="password" class="form_label">Enter a password</label>
+                <input type="password" id="password" class="form_input" placeholder="Enter password...">
+            </section>
+
+            <input type="submit" value="SUBMIT" class="btnsubmit">
+
+            <!-- Welcome message -->
+            <div class="greeting">
+                <p>Welcome to form events <span class="display_username">username</span></p>
+            </div>
+        </form>
+
+        <form class="myform">
+            <h2>Unscramble the word!</h2>
+            <p>Shuffled Word: <strong id="shuffled_word"></strong></p>
+
+            <section class="form_control">
+                <input type="text" id="guess_input" class="form_input"  placeholder="Type your guess...">
+                <p id="word_feedback"></p>
+            </section>
+        </form>
+
+        <script src="script.js"> </script>
+    </body>
+</html>

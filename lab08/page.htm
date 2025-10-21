@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Lab 8 | Knei</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Knei</h1>
+        <h2>Lab 8 | Events</h2>
+        <button class="btnpressme">PRESS ME!</button>
+
+        <h3>Event Delegation</h3>
+        <p>Click on the list to remove an item</p>
+        <ul id="list">
+            <li>Apple <span>&#10060;</span></li>
+            <li>Orange <span>&#10060;</span></li>
+            <li>Kiwi <span>&#10060;</span></li>
+        </ul>
+
+        <h3>preventDefault() method</h3>
+        <a href="https://www.qcc.cuny.edu" target="_blank" class="qcclink">QCC Link</a>
+
+        <h2>WINDOW EVENTS</h2>
+        <h3>Scroll Event</h3>
+        <div id="content">
+            <h4>Scrollable Content</h4>
+            <p>This content might be wider than the window, allowing horizontal scrolling if it is. If it isn't please make your window smaller</p>
+        </div>
+        <button class="btnscrollby">Scroll Right</button>
+
+        <h3>Image Gallary</h3>
+        <section class="main-container">
+            <div class="gallery-container">
+                <img class="gallery-image" src="images/1.jpg"></img>
+                <img class="gallery-image" src="images/2.jpg"></img>
+                <img class="gallery-image" src="images/3.jpg"></img>
+                <img class="gallery-image" src="images/4.jpg"></img>
+            </div>
+
+            <button class="btnleft">&#x276F;</button>
+            <button class="btnright">&#x276E;</button>
+        </section>
+
+        <h1>EXERCISES</h1>
+
+        <div class="circle"></div>
+        <div class="counter">0</div>
+        <button class="reset-count">RESET</button>
+
+        <script src="script.js"> </script>
+    </body>
+</html>
