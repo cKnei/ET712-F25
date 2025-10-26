@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Knei | Homework 04</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <h1>Knei | Homework 04</h1>
+
+        <section>
+            <form class="input_form">
+                <label for="username">Username</label>
+                <input type="text" id="username" />
+                <span class="error" id="username_error"></span>
+
+                <label for="email">Email</label>
+                <input type="text" id="email" />
+                <span class="error" id="email_error"></span>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" />
+                <span class="error" id="password_error"></span>
+
+                <button type="submit" id="submit" disabled=true>Submit</button>
+            </form>
+        </section>
+
+        <div class="divider"></div>
+
+        <div class="gallery-wrap">
+            <button class="btn" id="left">&lt;</button>
+
+            <div class="viewport">
+                <div class="cards">
+                    <div class="card">
+                        <h5>Mountain</h5>
+                        <p>A mountain with a coudy backdrop</p>
+                        <img src="images/1.jpg" alt="Image 1">
+                    </div>
+
+                    <div class="card">
+                        <h5>Cat at Window Frame</h5>
+                        <p>A cat with a wall that has a window in the back</p>
+                        <img src="images/2.jpg" alt="Image 2">
+                    </div>
+
+                    <div class="card">
+                        <h5>Lake in Mountain Valley</h5>
+                        <p>A beautiful blue lake in mountain valley</p>
+                        <img src="images/3.jpg" alt="Image 3">
+                    </div>
+
+                    <div class="card">
+                        <h5>Cat with Curtains</h5>
+                        <p>A white cat with curtains in the back</p>
+                        <img src="images/4.jpg" alt="Image 4">
+                    </div>
+
+                    <div class="card">
+                        <h5>Bird</h5>
+                        <p>A red bird with a black tuff of feathers on top</p>
+                        <img src="images/5.jpg" alt="Image 5">
+                    </div>
+
+                    <div class="card">
+                        <h5>Cup of Coffe?</h5>
+                        <p>I have no idea what drink that is, but it's on a table</p>
+                        <img src="images/6.jpg" alt="Image 6">
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn" id="right">&gt;</button>
+        </div>
+
+        <script src="script.js"> </script>
+    </body>
+</html>
