@@ -10,3 +10,23 @@ img {
     width: 100%;
     display: block;
 }
+
+.hidden {
+    display: none;
+}
+
+#colours {
+    background: red;
+}
+
+#shapes {
+    background: yellow;
+}
+
+#numbers {
+    background: blue;
+}
+
+#clothing {
+    background: green;
+}
