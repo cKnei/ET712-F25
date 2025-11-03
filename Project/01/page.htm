@@ -2,67 +2,184 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Knei | Lab </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Knei | Project 1</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <header>
-            <a class="navigation_option">Colours</a>
-            <a class="navigation_option">Shapes</a>
-            <a class="navigation_option">Numbers</a>
-            <a class="navigation_option">Clothing</a>
-        </header>
+        <div class="navigation_container">
+            <div class="navigation">
+                <a class="navigation_option navigation_selected">Colours</a>
+                <a class="navigation_option">Shapes</a>
+                <a class="navigation_option">Numbers</a>
+                <a class="navigation_option">Clothing</a>
+            </div>
+        </div>
+    
+        <h2 class="section_text">Click on the colour to learn it's name!</h2>
 
-        <section id="colours">
-            <div id="colour.black"></div>
-            <div id="colour.blue"></div>
-            <div id="colour.brown"></div>
-            <div id="colour.green"></div>
-            <div id="colour.orange"></div>
-            <div id="colour.pink"></div>
-            <div id="colour.red"></div>
-            <div id="colour.violet"></div>
-            <div id="colour.white"></div>
-            <div id="colour.yellow"></div>
+        <section id="colours" class="section">
+            <div class="box colour black"></div>
+            <div class="box colour blue"></div>
+            <div class="box colour brown"></div>
+            <div class="box colour green"></div>
+            <div class="box colour orange"></div>
+            <div class="box colour pink"></div>
+            <div class="box colour red"></div>
+            <div class="box colour violet"></div>
+            <div class="box colour white"></div>
+            <div class="box colour yellow"></div>
         </section>
 
         <section id="shapes">
-            <img id="shape.circle" />
-            <img id="shape.triangle" />
-            <img id="shape.square" />
-            <img id="shape.rectangle" />
-            <img id="shape.hexagon" />
-            <img id="shape.rhombus" />
-            <img id="shape.oval" />
-            <img id="shape.crescent" />
-            <img id="shape.star" />
-            <img id="shape.heart" />
+            <div class="gallery-wrap">
+                <button class="btn" id="sleft">&lt;</button>
+                
+                <div class="viewport" id="svp">
+                    <div class="cards">
+                        <div class="card shape circle">
+                            <img src="imgs/circle.svg"></svg>
+                        </div>
+                        
+                        <div class="card shape triangle">
+                            <img src="imgs/triangle.svg" alt="Image 2">
+                        </div>
+                        
+                        <div class="card shape square">
+                            <img src="imgs/square.svg" alt="Image 3">
+                        </div>
+                        
+                        <div class="card shape rectangle">
+                            <img src="imgs/rectangle.svg" alt="Image 4">
+                        </div>
+                        
+                        <div class="card shape hexagon">
+                            <img src="imgs/hexagon.svg" alt="Image 5">
+                        </div>
+                        
+                        <div class="card shape rhombus">
+                            <img src="imgs/rhombus.svg" alt="Image 6">
+                        </div>
+                        
+                        <div class="card shape oval">
+                            <img src="imgs/oval.svg" alt="Image 6">
+                        </div>
+                        
+                        <div class="card shape crescent">
+                            <img src="imgs/crescent.svg" alt="Image 6">
+                        </div>
+                        
+                        <div class="card shape star">
+                            <img src="imgs/star.svg" alt="Image 6">
+                        </div>
+                        
+                        <div class="card shape heart">
+                            <img src="imgs/heart.svg" alt="Image 6">
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="btn" id="sright">&gt;</button>
+            </div>
         </section>
 
-        <section id="numbers">
-            <div id="number.one"></div>
-            <div id="number.two"></div>
-            <div id="number.three"></div>
-            <div id="number.four"></div>
-            <div id="number.five"></div>
-            <div id="number.six"></div>
-            <div id="number.seven"></div>
-            <div id="number.eight"></div>
-            <div id="number.nine"></div>
-            <div id="number.ten"></div>
+        <section id="numbers" class="section">
+            <div class="box text">1</div>
+            <div class="box text">2</div>
+            <div class="box text">3</div>
+            <div class="box text">4</div>
+            <div class="box text">5</div>
+            <div class="box text">6</div>
+            <div class="box text">7</div>
+            <div class="box text">8</div>
+            <div class="box text">9</div>
+            <div class="box text">10</div>
         </section>
 
         <section id="clothing">
-            <img id="clothing.hat" />
-            <img id="clothing.shirt" />
-            <img id="clothing.pants" />
-            <img id="clothing.socks" />
-            <img id="clothing.shoes" />
-            <img id="clothing.jacket" />
-            <img id="clothing.dress" />
-            <img id="clothing.dress" />
-            <img id="clothing.skirt" />
-            <img id="clothing.sweater" />
+            <div class="gallery-wrap">
+                <button class="btn" id="cleft">&lt;</button>
+                
+                <div class="viewport" id="cvp">
+                    <div class="cards">
+                        <div class="card cloth" id="top-hat">
+                            <h5 id="top-hat-h5">Top Hat</h5>
+                            <p id="top-hat-p">A tall, fancy hat you wear for special occasions.</p>
+                            <div>🎩</div>
+                        </div>
+                        
+                        <div  class="card cloth" id="t-shirt">
+                            <h5 id="t-shirt-h5">T Shirt</h5>
+                            <p id="t-shirt-p">A soft short-sleeve shirt you wear every day.</p>
+                            <div>👕</div>
+                        </div>
+                        
+                        <div  class="card cloth" id="pants">
+                            <h5 id="pants-h5">Pants</h5>
+                            <p id="pants-p">Clothing that covers your legs from waist to ankles.</p>
+                            <div>👖</div>
+                        </div>
+                        
+                        <div  class="card cloth" id="socks">
+                            <h5 id="socks-h5">Socks</h5>
+                            <p id="socks-p">Soft foot covers you wear inside shoes to stay warm.</p>
+                            <div>🧦</div>
+                        </div>
+                        
+                        <div  class="card cloth" id="shoes">
+                            <h5 id="shoes-h5">Shoes</h5>
+                            <p id="shoes-p">Protective coverings for your feet you walk and run in.</p>
+                            <div>👟</div>
+                        </div>
+                        
+                        <div  class="card cloth" id="jacket">
+                            <h5 id="jacket-h5">Jacket</h5>
+                            <p id="jacket-p">An outer layer that keeps you warm when it's cold.</p>
+                            <div>🧥</div>
+                        </div>
+                        
+                        <div  class="card cloth" id="dress">
+                            <h5 id="dress-h5">Dress</h5>
+                            <p id="dress-p">A one-piece outfit that hangs down from the shoulders.</p>
+                            <div>👗</div>
+                        </div>
+                        
+                        <div  class="card cloth" id="gloves">
+                            <h5 id="gloves-h5">Gloves</h5>
+                            <p id="gloves-p">Coverings for your hands that keep them warm or clean.</p>
+                            <div>🧤</div>
+                        </div>
+                        
+                        <div  class="card cloth" id="shorts">
+                            <h5 id="shorts-h5">Shorts</h5>
+                            <p id="shorts-p">Short pants that keep you cool in warm weather.</p>
+                            <div>🩳</div>
+                        </div>
+                        
+                        <div  class="card cloth" id="scarf">
+                            <h5 id="scarf-h5">Scarf</h5>
+                            <p id="scarf-p">A long soft cloth you wrap around your neck to stay warm.</p>
+                            <div>🧣</div>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <button class="btn" id="cright">&gt;</button>
+            </div>
+        </section>
+
+        <section class="response"></section>
+
+        <section class="modal_overlay" id="sharedModal" style="display:none">
+            <div class="modal">
+                <span class="close_btn" id="sharedClose">&times;</span>
+                <h2 class="modal_title" id="sharedTitle"></h2>
+                <div class="modal_info">
+                    <img src="" class="modal_img" id="sharedImg">
+                    <p class="modal_p" id="sharedP"></p>
+                </div>
+            </div>
         </section>
 
         <script src="script.js"> </script>

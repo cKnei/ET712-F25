@@ -1,9 +1,11 @@
 * {
-    box-sizing: border-box;
+    box-sizing: content-box;
 }
 
 html {
     scroll-behavior: smooth;
+    background-color: lightblue;
+    font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", system-ui, sans-serif;
 }
 
 img {
@@ -11,22 +13,236 @@ img {
     display: block;
 }
 
-.hidden {
+/* ======================================
+ * General
+ * ======================================
+ */
+.box {
+    display: flex;
+    height: 12rem;
+    width: 12rem;
+    border-radius: 24px;
+    box-shadow: 2px 2px 2px 2px gray;
+    flex: 0 0 calc(20% - 20px);
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.box:hover {
+    cursor: pointer;
+    opacity: 0.75;
+}
+
+.section {
+    margin: 0 auto;
+    display: flex;
+}
+
+.section_text {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.text {
+    font-size: 3rem;
+    background-color: wheat;
+    text-align: center;
+}
+
+.response {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 40%;
+    height: 10%;
+    margin-top: 10px;
+    font-size: 4rem;
+}
+
+/* ======================================
+ * Navigation
+ * ======================================
+ */
+.navigation_container {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    margin: 40px auto;
+    width: fit-content;
+    border-radius: 12px
+}
+
+.navigation {
+    display: flex;
+    background-color: rgb(88, 165, 238);
+    border-radius: 12px;
+}
+
+.navigation_option {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 14px 24px;
+    font-size: 3rem;
+    cursor: pointer;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.navigation_option:hover {
+    background-color: rgb(33, 118, 197);
+    border-radius: 12px;
+}
+
+.navigation_selected {
+    background-color: rgb(12, 91, 165);
+    border-radius: 12px;
+}
+
+/* ======================================
+ * Colors
+ * ======================================
+ */
+#colours {
+    width: 45%;
+    flex-wrap: wrap;
+    flex: 0 0 auto;
+}
+
+.black  { background-color: black;  }
+.blue   { background-color: blue;   }
+.brown  { background-color: brown;  }
+.green  { background-color: green;  }
+.orange { background-color: orange; }
+.pink   { background-color: pink;   }
+.red    { background-color: red;    }
+.violet { background-color: violet; }
+.white  { background-color: white;  }
+.yellow { background-color: yellow; }
+
+/* ======================================
+ * Numbers
+ * ======================================
+ */
+#numbers {
+    width: 45%;
+    flex-wrap: wrap;
+    flex: 0 0 auto;
+}
+
+/* ======================================
+ * Shapes & Clothing (they share the same gallery system)
+ * ======================================
+ */
+
+.gallery-wrap {
+    display: flex;
+    align-items: center;
+    width: 45%;
+    margin: 24px auto;
+}
+
+.btn {
+    background: #555555;
+    color: #ffffff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.viewport {
+    overflow: hidden;
+    flex: 1 1 auto;
+}
+
+.cards {
+    justify-content: flex;
+    display: flex;
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    padding: 15px;
+    width: 16.83%;
+    flex: 0 0 auto;
+    text-align: left;
+    transition: transform 500ms ease;
+}
+
+.card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+.card h5 {
+    margin: 6px 0;
+    font-size: 16px;
+}
+
+.card p {
+    font-size: 14px;
+    color: darkgray;
+    margin: 6px 0 12px;
+}
+
+.card:hover {
+    opacity: 0.75;
+}
+
+/* ======================================
+ * Clothing
+ * ======================================
+ */
+
+.modal_overlay {
+    background-color: rgba(50, 50, 50, 0.8);
+    position: fixed;
+    top: 0%;
+    bottom: 0%;
+    right: 0%;
+    left: 0%;
     display: none;
 }
 
-#colours {
-    background: red;
+.modal {
+    background-color: whitesmoke;
+    width: 800px;
+    margin: 100px auto;
+    position: relative;
 }
 
-#shapes {
-    background: yellow;
+.close_btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+    color: darkblue;
+    cursor: pointer;
+    font-weight: bolder;
 }
 
-#numbers {
-    background: blue;
+.close_btn:hover {
+    color: crimson;
 }
 
-#clothing {
-    background: green;
+.modal h2 {
+    text-align: center;
+    padding: 1em;
+    color: darkblue;
+}
+
+.modal_info {
+    display: flex;
+}
+
+.modal_img, .modal_p {
+    width: 50%;
+    padding: 2rem;
 }
