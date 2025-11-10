@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+/* comment.js */
+.card {
+    width: 300px;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 2rem;
+}
+
+.author {
+    text-align: center;
+    font-weight: bolder;
+    display: block;
+    font-size: 1.5rem;
+}
+
+.metadata {
+    text-align: center;
+}
+
+.date {
+    font-style: italic;
+    color: darkblue;
+    font-weight: bolder;
+}
+
+/* App.js */
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+/* user_feedback.js */
+.feedback_container {
+    margin: 1rem;
+}
+
+.feedback_container:hover {
+    box-shadow: 0px 0px 5px 1px gray;
+    transform: scale(1.01);
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.feedback_card {
+    width: 300px;
+    border: solid 1px gray;
+    border-radius: 5px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.feedback_description {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    padding: 1rem;
+}
+
+.feedback_footer {
+    background-color: gray;
+    padding: 0.5rem 1rem;
+    color: aliceblue;
+}

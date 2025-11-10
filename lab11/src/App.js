@@ -13,7 +13,7 @@ function App() {
         </section>
         
         <figure className="img_container">
-            <img src={mountain} />
+            <img alt="Mountain" src={mountain} />
         </figure>
     </>);
 }
