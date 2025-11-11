@@ -22,38 +22,18 @@ const SECTION_TEXT = {
 }
 
 const NUMBER_EXAMPLE = [
-"\u{1F3B2}", // 🎲
-"\u{1F335}", // 🌵
-"\u{1F984}", // 🦄
-"\u{1F355}", // 🍕
-"\u{1F680}", // 🚀
-"\u{1F308}", // 🌈
-"\u{1F419}", // 🐙
-"\u{1F3A7}", // 🎧
-"\u{1F525}", // 🔥
-"\u{1F369}", // 🍩
-"\u{1F436}", // 🐶
-"\u{1F431}", // 🐱
-"\u{1F430}", // 🐰
-"\u{1F42E}", // 🐮
-"\u{1F434}", // 🐴
-"\u{1F98B}", // 🦋
-"\u{1F40D}", // 🐍
-"\u{1F577}", // 🕷️
-"\u{1F98A}", // 🦊
-"\u{1F47B}", // 👻
-"\u{1F4A1}", // 💡
-"\u{1F4BB}", // 💻
-"\u{1F4BE}", // 💾
-"\u{1F4B0}", // 💰
-"\u{1F381}", // 🎁
-"\u{1F389}", // 🎉
-"\u{1F947}", // 🥇
-"\u{1F3C3}", // 🏃"
-"\u{1F3D4}", // 🏔️
+    "\u{1F3B2}", "\u{1F335}", "\u{1F984}", "\u{1F355}", // 🎲  🌵  🦄  🍕 
+    "\u{1F680}", "\u{1F308}", "\u{1F419}", "\u{1F3A7}", // 🚀  🌈  🐙  🎧
+    "\u{1F525}", "\u{1F369}", "\u{1F436}", "\u{1F431}", // 🔥  🍩  🐶  🐱
+    "\u{1F430}", "\u{1F42E}", "\u{1F434}", "\u{1F98B}", // 🐰  🐮  🐴  🦋
+    "\u{1F40D}", "\u{1F577}", "\u{1F98A}", "\u{1F47B}", // 🐍  🕷️  🦊  👻
+    "\u{1F4A1}", "\u{1F4BB}", "\u{1F4BE}", "\u{1F4B0}", // 💡  💻  💾  💰
+    "\u{1F381}", "\u{1F389}", "\u{1F947}", "\u{1F3C3}", // 🎁  🎉  🥇  🏃
+    "\u{1F3D4}", // 🏔️
 ];
 
 const NAVIGATION_OPTIONS = document.querySelectorAll(".navigation_option");
+const NAVIGATION_CONTAINER = document.querySelector('.navigation_container');
 const SECTION_TEXT_ = document.querySelector(".section_text");
 const RESPONSE_TEXT = document.querySelector(".response");
 
@@ -65,6 +45,45 @@ let previousShape = "circle";
  * FUNCTION DECLARATION
  * ========================================
  */
+
+function resizeWindow() {
+    const width = window.innerWidth;
+    let containerWidth, display, fontSize, padding, boxRounding;
+
+    if (width < 600) {
+        boxRounding = "6px";
+        containerWidth = "95%";
+        display = "block";
+        fontSize = "1.5rem";
+        padding = "10px";
+    } else if (width < 900) {
+        boxRounding = "12px";
+        containerWidth = "90%";
+        display = "inline-block";
+        fontSize = "2rem";
+        padding = "12px 20px";
+    } else {
+        boxRounding = "24px";
+        containerWidth = "fit-content";
+        display = "inline-block";
+        fontSize = "3rem";
+        padding = "14px 24px";
+    }
+
+    NAVIGATION_CONTAINER.style.width = containerWidth;
+    for ( let option of NAVIGATION_OPTIONS ) {
+        console.log(option)
+        option.style.display = display;
+        option.style.fontSize = fontSize;
+        option.style.padding = padding;
+    }
+
+    for ( let box of document.querySelectorAll(".box") ) {
+        box.style.borderRadius = boxRounding;
+    }
+}
+
+
 function toggleSection(section) {
     for ( let s in SECTION )
         SECTION[s].style.display = "none";
@@ -161,6 +180,11 @@ document.querySelector('#cleft')
         scrollToIndex(index, "#cvp");
     });
 
+
+resizeWindow();
+window.addEventListener('resize', function() {
+    resizeWindow();
+});
 
 
 // This is just for modals (Yeah I did all of them cause why not)
