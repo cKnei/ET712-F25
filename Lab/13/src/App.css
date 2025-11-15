@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+
+/* ./App.js */
+.title {
+    text-align: center;
+    color: blueviolet;
+}
+
+
+/* ./components/navbar.js */
+.navbar {
+    background-color: aliceblue;
+    width: 900px;
+    margin: auto;
+    display: flex;
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+.navbar div:first-child {
+    width: 20%;
+}
+
+.navbar div:first-child a {
+    color: blueviolet;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.button-group {
+    width: 80%;
+}
+
+.button-group button {
+    background-color: aliceblue;
+    width: 20%;
+    font-size: 1.5rem;
+    text-decoration: none;
+    border: none;
+}
+
+.navbar div:first-child a:hover, 
+.button-group button:hover {
+    color: crimson;
+}
+
+/* ./components/about.js */
+.header-title {
+    text-align: center;
+}
+
+/* ./components/home.js */
+.main-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    width: 900px;
+    margin: 2rem auto;
+}
+
+.card-image {
+    width: 40%;
+    margin: 2%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 1px 1px 5px gray;
+    transition: ease-in-out;
+}
+
+.card-image:hover {
+    cursor: pointer;
+    transform: scale(0.99);
+    box-shadow: none;
+    opacity: 0.7;
+    border: gray solid 2px;
+}

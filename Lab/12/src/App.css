@@ -71,3 +71,58 @@ img {
     padding: 0.5rem 1rem;
     color: aliceblue;
 }
+
+
+/* ModalWindow.js */
+.modal-window {
+    display: none;
+    background-color: rgba(20, 20, 20, 0.5);
+    display: fixed;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+}
+
+.modal-content {
+    background-color: whitesmoke;
+    width: 500px;
+    margin: 100px auto;
+}
+
+.modal-header {
+    border-bottom: ridge 1px lightblue;
+    display: flex;
+}
+
+.modal-header p:nth-child(1) {
+    font-size: 1.2rem;
+    text-align: center;
+    width: 80%;
+}
+
+.modal-close {
+    margin-left: auto;
+    padding-right: 2rem;
+    color: lightgreen;
+}
+
+.modal-comment {
+    width: 80%;
+    margin: 10%;
+    padding: 0.5rem 1rem;
+}
+
+.modal-comment-post {
+    width: 80%;
+    margin: 10%;
+    background-color: limegreen;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+
+.modal-comment-post:hover, .modal-close:hover {
+    background-color: crimson; 
+}
