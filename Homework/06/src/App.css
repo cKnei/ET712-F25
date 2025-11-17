@@ -1,0 +1,40 @@
+* {
+    box-sizing: 100%;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.product-listing {
+    display: flex;
+    overflow: wrap;
+    border: 1px solid red;
+    width: 50%;
+}
+
+.product-grid {
+    display: grid;
+    gap: 16px;
+    justify-content: center;
+    padding: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    max-width: calc((280px * 5) + (16px * 4));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 260px));
+}
+
+.product-grid .card {
+    width: 100%;
+    max-width: 260px;
+    box-sizing: border-box;
+}
+
+.attribution {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding-right: 12px;
+}
