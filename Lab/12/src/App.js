@@ -1,33 +1,30 @@
+import Feedback from "./Feedback";
+import User from "./Comment";
 import './App.css';
-import User from "./comments";
-import User_Feedback from "./user_feedback";
-
-
-import Batman from "./images/Batman.png";
-import man from "./images/man.png";
-import woman from "./images/woman.png";
-
 
 function App() {
     return (<>
-        <h1 style={{textAlign: "Center"}}>Lab 12, React Props by Knei</h1>
+        <h1 style={{textAlign: "center"}}>Lab 12, React props by Knei</h1>
         <section className="container">
-            {/* User 1 */}
-            <User_Feedback>
-                <User author="Batman"   image={Batman}  date_posted="04/23/2025"    comment="I'm Batman" />
-            </User_Feedback>
+            <Feedback author="Batman">
+                <User image="images/batman.png" datePosted="04/23/2025" message="I am Batman" />
+            </Feedback>
 
-            {/* User 2 */}
-            <User_Feedback>
-                <User author="Daisy"    image={woman}   date_posted="01/20/2025"    comment="Where is the bus stop?" />
-            </User_Feedback>
+            <Feedback author="Daisy">
+                <User image="images/graduate.png" datePosted="01/20/2025" message="Where is the bus stop?" />
+            </Feedback>
 
-            {/* User 3 */}
-            <User_Feedback>
-                <User author="Peter"    image={man}     date_posted="12/13/2024"    comment="I need help!" />
-            </User_Feedback>
+            <Feedback author="Peter">
+                <User image="images/support.png" datePosted="04/23/2025" message="I need help!" />
+            </Feedback>
+        </section>
+
+        <section className="post-comment-list">
+            <ul className="comment-list">
+            </ul>
         </section>
     </>);
 }
+
 
 export default App;

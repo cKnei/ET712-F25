@@ -3,56 +3,70 @@
 }
 
 img {
+    aspect-ratio: 1/1;
     width: 100%;
     display: block;
 }
 
-/* comment.js */
-.card {
+/* ./src/Comment.js */ 
+/* .card {
+    border: solid 1px gray;
     width: 300px;
     border-radius: 5px;
     padding: 1rem;
     margin: 2rem;
-}
+} */
 
-.author {
+.card-content {
     text-align: center;
-    font-weight: bolder;
     display: block;
+    font-weight: bolder;
     font-size: 1.5rem;
 }
 
-.metadata {
+.card-metadata {
     text-align: center;
 }
 
-.date {
+.card-posted-date {
     font-style: italic;
     color: darkblue;
     font-weight: bolder;
 }
 
-/* App.js */
+/* ./src/App.js */
 .container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
+.post-comment-list {
+    width: 980px;
+    background-color: rgb(240, 240, 240);
+    margin: 3rem auto;
+}
 
-/* user_feedback.js */
-.feedback_container {
+.post-comment-list li {
+    list-style: none;
+    background-color: white;
+    padding: 1rem;
+    border: solid 1px rgb(240, 240, 240);
+}
+
+/* ./src/Feedback.js */
+.feedback-container {
     margin: 1rem;
 }
 
-.feedback_container:hover {
-    box-shadow: 0px 0px 5px 1px gray;
+.feedback-container:hover {
+    box-shadow: 0px 0px 05px 1px gray;
     transform: scale(1.01);
     overflow: hidden;
     border-radius: 10px;
 }
 
-.feedback_card {
+.feedback-card {
     width: 300px;
     border: solid 1px gray;
     border-radius: 5px;
@@ -60,34 +74,35 @@ img {
     overflow: hidden;
 }
 
-.feedback_description {
-    font-size: 1.5rem;
-    font-weight: bolder;
-    padding: 1rem;
-}
-
-.feedback_footer {
+.feedback-footer {
     background-color: gray;
     padding: 0.5rem 1rem;
     color: aliceblue;
 }
 
+.feedback-content {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    padding: 1rem;
+}
 
-/* ModalWindow.js */
+/* ./src/ModalWindow.js */
 .modal-window {
-    display: none;
-    background-color: rgba(20, 20, 20, 0.5);
-    display: fixed;
+    z-index: 1000;
+    background-color: rgba(50, 50, 50, 0.7);
+    position: fixed;
     top: 0%;
     bottom: 0%;
     left: 0%;
     right: 0%;
+    display: none;
 }
 
 .modal-content {
     background-color: whitesmoke;
     width: 500px;
     margin: 100px auto;
+
 }
 
 .modal-header {
@@ -104,25 +119,26 @@ img {
 .modal-close {
     margin-left: auto;
     padding-right: 2rem;
-    color: lightgreen;
+    color: lightgreen
 }
 
-.modal-comment {
-    width: 80%;
-    margin: 10%;
-    padding: 0.5rem 1rem;
+.modal-close:hover {
+    color: red;
 }
 
-.modal-comment-post {
+.modal-comment-input {
     width: 80%;
     margin: 10%;
-    background-color: limegreen;
+    padding: 0.5rem 1rem; 
+}
+
+.modal-comment-post-button {
+    width: 80%;
+    margin: 10%;
+    background-color: lightgreen;
     padding: 1rem;
-    border: none;
-    border-radius: 5px;
 }
 
-
-.modal-comment-post:hover, .modal-close:hover {
-    background-color: crimson; 
+.modal-comment-post-button:hover {
+    background-color: crimson;
 }
