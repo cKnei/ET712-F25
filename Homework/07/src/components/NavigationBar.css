@@ -1,0 +1,17 @@
+.navigation {
+    align-items: center;
+    background-color: cadetblue;
+    display: flex;
+    height: 50px;
+}
+
+.navigation-option {
+    color: #ffffff;
+    display: flex;
+    margin: 2rem;
+    text-decoration: none;
+}
+
+.navigation-option:hover {
+    color: #cccccc;
+}
